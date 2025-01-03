@@ -40,13 +40,13 @@ This project is a Telegram chatbot that can interact with users, maintain chat h
        "TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
        "username": "YOUR_BOT_USERNAME",
        "mode": "api",  
-       "api_key": "YOUR_API_KEY",  // required if mode is "api"
-       "base_url": "YOUR_API_BASE_URL",  // required if mode is "api"
-       "model": "YOUR_MODEL_NAME", // required if mode is "api"
-       "context_length": 100  //required
+       "api_key": "YOUR_API_KEY", 
+       "base_url": "YOUR_API_BASE_URL", 
+       "model": "YOUR_MODEL_NAME",
+       "context_length": 100
      }
      ```
-   - Replace the placeholders with your actual bot token, username, and API details.
+   - Replace the placeholders with your actual bot token, username, and API details. See the `Configuration` section below for more details.
 
 4. **Run the Bot**:
    ```bash
@@ -86,18 +86,30 @@ This project is a Telegram chatbot that can interact with users, maintain chat h
        "TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
        "username": "YOUR_BOT_USERNAME",
        "mode": "local", 
-       "api_key": "YOUR_API_KEY",  // not required
-       "base_url": "YOUR_API_BASE_URL",  // not required
-       "model": "YOUR_MODEL_NAME",  // not required
-       "context_length": 100  //required
+       "api_key": "YOUR_API_KEY",
+       "base_url": "YOUR_API_BASE_URL",  
+       "model": "YOUR_MODEL_NAME",  
+       "context_length": 100 
      }
      ```
-   - Replace the placeholders with your actual bot token, username, and API details.
+   - Replace the placeholders with your actual bot token, username, and API details. See the `Configuration` section below for more details.
 
 4. **Run the Bot**:
    ```bash
    python main.py
    ```
+
+## Configuration
+
+The bot's behavior can be customized by modifying the `config.json` file:
+
+- **TOKEN**: Your Telegram bot token.
+- **username**: The username of your bot.
+- **mode**: Set to `"local"` to use a local chatbot model or `"api"` to use an external API.
+- **api_key**: The API key for the external service (required if mode is `"api"`).
+- **base_url**: The base URL for the external API (required if mode is `"api"`).
+- **model**: The model name to use with the external API (required if mode is `"api"`).
+- **context_length**: The maximum number of messages to store in the chat history.
 
 ## Usage
 

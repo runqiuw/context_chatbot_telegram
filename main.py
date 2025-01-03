@@ -56,7 +56,7 @@ async def summarize(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                         message_thread_id=update.effective_message.message_thread_id)
         return
     summarize_length =  context.args[0] if context.args else 20
-    if int(summarize_length) > min(messages_store[(update.effective_chat.id, update.effective_message.message_thread_id)].maxlen, max_stored_messages):
+    if int(summarize_length) > min(len(messages_store[(update.effective_chat.id, update.effective_message.message_thread_id)]), max_stored_messages):
         await context.bot.send_message(chat_id=update.effective_chat.id, 
                                         text="Number of messages to summarize exceeds the maximum limit.", 
                                         message_thread_id=update.effective_message.message_thread_id)
