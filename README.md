@@ -2,6 +2,8 @@
 
 This project is a Telegram chatbot that can interact with users, maintain chat history, and provide summaries of past conversations. The bot is designed to be flexible, allowing it to operate in either a local mode or via an API, depending on the configuration.
 
+https://github.com/user-attachments/assets/76780e14-b5db-4411-9216-0dbb6b5674bf
+
 ## Features
 
 - **Chat History Management**: The bot keeps track of recent messages in a chat, allowing it to provide context-aware responses.
